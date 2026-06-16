@@ -52,7 +52,9 @@ EnterpriseEMS/
                             ├── EmployeeRepository.java   # Profile Management & Query Operations
                             └── PayrollRepository.java    # Automated Ledger Salary Processor
 
-## 🌟 Key Core Features
+---
+
+## **🌟 Key Core Features**
 Employee Profile Management: Form-driven registry interface to capture complete, un-duplicated corporate identity details.
 
 Organizational Hierarchy Mapping: Normalizes entity spaces through dedicated relational references across Departments and Designations.
