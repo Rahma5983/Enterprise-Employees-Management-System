@@ -19,3 +19,14 @@ The application utilizes a multi-tier architecture, establishing a high-performa
 ## 🏗️ Architectural Framework
 
 The application is structured following clean coding paradigms and an industry-standard Multi-Tier / Layered Architecture pattern to ensure separation of concerns, modular scalability, and maintainability.
+
+[MainApplication Dashboard (CLI Presentation View)]
+│
+▼
+[Repository Layer DAOs (Business Logic & Query Isolation)]
+│
+▼
+[DatabaseConfig Driver Gateway (Singleton Connection Pool)]
+│
+▼
+[MySQL Database Server (Relational Persistent Data Store)]
