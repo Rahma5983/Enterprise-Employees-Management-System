@@ -30,3 +30,24 @@ The application is structured following clean coding paradigms and an industry-s
 │
 ▼
 [MySQL Database Server (Relational Persistent Data Store)]
+
+### Directory Structure & Package Layout
+```text
+EnterpriseEMS/
+├── db_setup1.sql             # SQL Schema Definitions, Indexes & Seeds
+├── pom.xml                   # Maven Configuration & Dependency Tree
+└── src/
+    └── main/
+        └── java/
+            └── com/
+                └── enterprise/
+                    └── ems/
+                        ├── MainApplication.java       # System Main Loop / UI Router
+                        ├── config/
+                        │   └── DatabaseConfig.java   # Thread-Safe DB Connection Gateway
+                        ├── model/
+                        │   └── Employee.java         # Core Domain Entity Object
+                        └── repository/
+                            ├── AttendanceRepository.java # Attendance & Leave Transaction Unit
+                            ├── EmployeeRepository.java   # Profile Management & Query Operations
+                            └── PayrollRepository.java    # Automated Ledger Salary Processor
