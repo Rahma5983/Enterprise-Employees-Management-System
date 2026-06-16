@@ -52,7 +52,7 @@ EnterpriseEMS/
                             ├── EmployeeRepository.java   # Profile Management & Query Operations
                             └── PayrollRepository.java    # Automated Ledger Salary Processor
 
-🌟 Key Core Features
+## 🌟 Key Core Features
 Employee Profile Management: Form-driven registry interface to capture complete, un-duplicated corporate identity details.
 
 Organizational Hierarchy Mapping: Normalizes entity spaces through dedicated relational references across Departments and Designations.
@@ -67,7 +67,7 @@ Report Generation Engine: Formats relational database records into an enterprise
 
 Performance Tuning & Safety: Includes isolated indexing optimization tables (idx_employee_name) to speed up partial string wildcard lookups (LIKE %?%), wrapped inside parameter-bound PreparedStatement boundaries to block SQL Injection threats.
 
-🚀 Step-by-Step Installation & Deployment
+## 🚀 Step-by-Step Installation & Deployment
 Follow these sequence blocks to launch the system on a local environment:
 
 1. Database Tier Initialization
