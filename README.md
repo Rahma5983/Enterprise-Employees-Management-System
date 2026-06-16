@@ -6,54 +6,6 @@ The application utilizes a multi-tier architecture, establishing a high-performa
 
 ---
 
-## 🛠️ Technology Stack & System Components
-
-* **Backend Environment:** Java Standard Edition (Java SE 17+)
-* **Database Engine:** MySQL Server 8.0 / 9.0
-* **Data Access Layer:** Java Database Connectivity (JDBC API)
-* **Build Architecture & Dependency Manager:** Apache Maven
-* **Database Connector:** `mysql-connector-j`
-
----
-
-## 🏗️ Architectural Framework
-
-The application is structured following clean coding paradigms and an industry-standard Multi-Tier / Layered Architecture pattern to ensure separation of concerns, modular scalability, and maintainability.
-
-[MainApplication Dashboard (CLI Presentation View)]
-│
-▼
-[Repository Layer DAOs (Business Logic & Query Isolation)]
-│
-▼
-[DatabaseConfig Driver Gateway (Singleton Connection Pool)]
-│
-▼
-[MySQL Database Server (Relational Persistent Data Store)]
-
-### Directory Structure & Package Layout
-```text
-EnterpriseEMS/
-├── db_setup1.sql             # SQL Schema Definitions, Indexes & Seeds
-├── pom.xml                   # Maven Configuration & Dependency Tree
-└── src/
-    └── main/
-        └── java/
-            └── com/
-                └── enterprise/
-                    └── ems/
-                        ├── MainApplication.java       # System Main Loop / UI Router
-                        ├── config/
-                        │   └── DatabaseConfig.java   # Thread-Safe DB Connection Gateway
-                        ├── model/
-                        │   └── Employee.java         # Core Domain Entity Object
-                        └── repository/
-                            ├── AttendanceRepository.java # Attendance & Leave Transaction Unit
-                            ├── EmployeeRepository.java   # Profile Management & Query Operations
-                            └── PayrollRepository.java    # Automated Ledger Salary Processor
-
----
-
 ## 🌟 Key Core Features
 
 * **Employee Profile Management:** Form-driven registry interface to capture complete, un-duplicated corporate identity details.
@@ -80,7 +32,9 @@ Follow these sequence blocks to launch the system on a local environment:
 2. Go to `File` ➔ `Import` ➔ `Existing Maven Projects` and choose the project directory containing your `pom.xml`.
 3. Navigate to the source package file: `src/main/java/com/enterprise/ems/config/DatabaseConfig.java`.
 4. Modify the connection driver credentials to match your local installation:
-   ```java
+```java
    private static final String URL = "jdbc:mysql://localhost:3306/EnterpriseEMS";
    private static final String USER = "root"; 
    private static final String PASSWORD = "YOUR_LOCAL_PASSWORD_HERE";
+
+### 3. Execution Phase
