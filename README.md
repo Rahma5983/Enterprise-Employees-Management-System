@@ -51,3 +51,48 @@ EnterpriseEMS/
                             ├── AttendanceRepository.java # Attendance & Leave Transaction Unit
                             ├── EmployeeRepository.java   # Profile Management & Query Operations
                             └── PayrollRepository.java    # Automated Ledger Salary Processor
+
+🌟 Key Core Features
+Employee Profile Management: Form-driven registry interface to capture complete, un-duplicated corporate identity details.
+
+Organizational Hierarchy Mapping: Normalizes entity spaces through dedicated relational references across Departments and Designations.
+
+Attendance Tracking: Real-time logging matrix storing entry / exit timestamps (HH:MM:SS) mapping specific day flags.
+
+Leave Operations Gateway: Integrated request engine managing specialized classification scopes (Sick, Casual, Paid, Unpaid) resting at default PENDING states.
+
+Automated Payroll Ledger: Uses high-speed database calculation rules (GENERATED ALWAYS AS) to process total earnings minus deductions without backend compute costs.
+
+Report Generation Engine: Formats relational database records into an enterprise-grade tabular terminal layout for real-time administration lookups.
+
+Performance Tuning & Safety: Includes isolated indexing optimization tables (idx_employee_name) to speed up partial string wildcard lookups (LIKE %?%), wrapped inside parameter-bound PreparedStatement boundaries to block SQL Injection threats.
+
+🚀 Step-by-Step Installation & Deployment
+Follow these sequence blocks to launch the system on a local environment:
+
+1. Database Tier Initialization
+Launch MySQL Workbench or your preferred command line terminal.
+
+Open the included db_setup1.sql file.
+
+Click the Lightning Bolt (⚡) icon (or run the script) to initialize the EnterpriseEMS database instance, set up all 6 relational tables, generate the performance indexes, and write the department starter seeds.
+
+2. Java Application Configuration
+Open your IDE (Eclipse IDE or IntelliJ IDEA).
+
+Go to File ➔ Import ➔ Existing Maven Projects and choose the project directory containing your pom.xml.
+
+Navigate to the source package file: src/main/java/com/enterprise/ems/config/DatabaseConfig.java.
+
+Modify the connection driver credentials to match your local installation:
+
+Java
+private static final String URL = "jdbc:mysql://localhost:3006/EnterpriseEMS";
+private static final String USER = "root"; 
+private static final String PASSWORD = "YOUR_LOCAL_PASSWORD_HERE"; 
+3. Execution Phase
+Locate MainApplication.java inside the Project Explorer.
+
+Right-click the file and select Run As ➔ Java Application.
+
+Use the terminal console control prompt panel interface to navigate operational tasks!
